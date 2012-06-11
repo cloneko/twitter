@@ -32,13 +32,13 @@ Twitter.configure do |config|
 	config.proxy = ENV['http_proxy']
 end
 
-if (ARGV[0] == nil)
+if ARGV.empty?
 	exit(1)
 end
 
 msg = ARGV[0]
 
-if (msg.length > 140)
+if msg.split(//u).length > 140
 	puts 'Over 140 length'
 else
 	Twitter.update(msg) 
