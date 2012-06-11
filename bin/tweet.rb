@@ -3,6 +3,7 @@ require 'oauth'
 require 'Twitter'
 require 'yaml'
 
+Dir.chdir(File.dirname(__FILE__))
 setting = YAML.load_file("setting.yaml")
 
 ConsumerKey = setting["consumer"]["key"]
