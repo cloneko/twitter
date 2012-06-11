@@ -23,8 +23,7 @@ OAuthSecret = setting["oauth"]["secret"]
 #puts access_token.secret
 #exit
 
-# Tweet Process
-
+# Tweet Process 
 Twitter.configure do |config|
 	config.consumer_key = ConsumerKey
 	config.consumer_secret = ConsumerKeySecret
@@ -42,9 +41,6 @@ msg = ARGV[0]
 if (msg.length > 140)
 	puts 'Over 140 length'
 else
-	Twitter.update(msg)
-#	puts msg
-
+	Twitter.update(msg) 
 end
 
-#Twitter.update("muhu---")
