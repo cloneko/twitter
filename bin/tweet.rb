@@ -11,11 +11,6 @@ ConsumerKeySecret = setting["consumer"]["secret"]
 OAuthToken = setting["oauth"]["token"]
 OAuthSecret = setting["oauth"]["secret"]
 
-puts ConsumerKey
-puts ConsumerKeySecret
-puts OAuthToken
-puts OAuthSecret
-
 # Initialize Process
 #consumer = OAuth::Consumer.new(ConsumerKey, ConsumerKeySecret,:site => 'http://twitter.com') 
 #request_token = consumer.get_request_token 
