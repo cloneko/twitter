@@ -1,12 +1,20 @@
 require 'rubygems'
 require 'oauth'
 require 'Twitter'
+require 'yaml'
 
-ConsumerKey = 'QHLmvGHLsa9ZFjc8ksLoEg'
-ConsumerKeySecret = 'ET321jchZUj41D1mkOrXw3QYwXlC7nYfGBeZRSc4'
+setting = YAML.load_file("setting.yaml")
 
-OAuthToken = '6331652-Gb1LKSj7qfQaMpz8DaYCrQLsJO3PdmygMKzlBERiy6'
-OAuthSecret = 'cU1jO2RsArp3lOx4CkiL6qIMW6CJiMzXAzllKkXgrE'
+ConsumerKey = setting["consumer"]["key"]
+ConsumerKeySecret = setting["consumer"]["secret"]
+
+OAuthToken = setting["oauth"]["token"]
+OAuthSecret = setting["oauth"]["secret"]
+
+puts ConsumerKey
+puts ConsumerKeySecret
+puts OAuthToken
+puts OAuthSecret
 
 # Initialize Process
 #consumer = OAuth::Consumer.new(ConsumerKey, ConsumerKeySecret,:site => 'http://twitter.com') 
