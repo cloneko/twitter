@@ -30,6 +30,7 @@ Twitter.configure do |config|
 	config.consumer_secret = ConsumerKeySecret
 	config.oauth_token = OAuthToken
 	config.oauth_token_secret = OAuthSecret
+	config.proxy = ENV['http_proxy']
 end
 
 if (ARGV[0] == nil)
