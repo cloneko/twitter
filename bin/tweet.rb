@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'oauth'
-require 'Twitter'
+require 'twitter'
 require 'yaml'
 
 Dir.chdir(File.dirname(__FILE__))
