@@ -32,11 +32,19 @@ Twitter.configure do |config|
 	config.proxy = ENV['http_proxy']
 end
 
+msg = ""
 if ARGV.empty?
+	STDIN.read.split("\n").each do |a|
+		msg << a + "\n"
+	end
+else
+	msg = ARGV[0]
+end
+
+if msg.empty?
 	exit(1)
 end
 
-msg = ARGV[0]
 
 if msg.split(//u).length > 140
 	puts 'Over 140 length'
